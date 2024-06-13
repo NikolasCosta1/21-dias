@@ -1,0 +1,18 @@
+let arrayA = [13, 20, 10, 22, 24, 20, 27, 17, 19, 14, 11]
+let arrayB = [24, 22, 23, 11, 15, 17, 29, 14, 16, 21, 11]
+
+function numerosComuns(arrayA, arrayB){
+    arraySaida = []
+    contador = 0
+    for(let i = 0; i < arrayA.length;i++){
+        for(let j = 0; j < arrayB.length;j++){
+            if(arrayA[i] == arrayB[j]){
+                arraySaida[contador] = arrayA[i]
+                contador++
+                j = arrayB.length
+            }
+        }
+    }
+    return arraySaida
+}
+console.log(numerosComuns(arrayA,arrayB))
