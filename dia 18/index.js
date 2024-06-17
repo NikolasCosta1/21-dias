@@ -46,17 +46,14 @@ class Biblioteca{
             if(livro.Titulo == titulo){
                 if(livro.Disponibilidade == true){
                     livro.Disponibilidade = false
+                    console.log('livro emprestado com sucesso')
                     emprestado = true
                 } 
             }
         })
-        if(emprestado){
-            return true
-        }else{
-            return false
-        }
+        return emprestado
     }
-    
+
     devolverLivro(titulo){
         livros.forEach(livro =>{
             if(livro.Titulo == titulo){
